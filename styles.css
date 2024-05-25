@@ -6,12 +6,6 @@ body, html {
     align-items: center;
 }
 
-.resetGame{
-    margin-top: 10px;
-    width: 100px;
-    height: 60px;
-}
-
 .container{
     display: flex;
     flex-direction: column;
@@ -34,4 +28,20 @@ body, html {
 .grid-container button{
     width: 150px;
     height: 150px;
+}
+
+.additionalButtons{
+    display: flex;
+    column-gap: 30px;
+}
+
+.additionalButtons button{
+    margin-top: 10px;
+    width: 100px;
+    height: 60px;
+    background-color: lightgray;
+}
+
+.additionalButtons .twoPlayersButton{
+    background-color: lightblue;
 }
