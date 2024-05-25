@@ -91,7 +91,6 @@ function makeMove(button){
         // If the easy bot is active, make a random possible move
         if(isPlayingAgainstEasyBot){
             if(currentMove == 1){
-                console.log(possibleMoves);
                 // Take out the human made moves from the list of possible moves
                 const idName = button.getAttribute("id");
                 const buttonIndex = idName[idName.length-1];
@@ -102,7 +101,6 @@ function makeMove(button){
                     const randomIndex = Math.round(Math.random() * (possibleMoves.length-1));
                     const indexOfButton = possibleMoves[randomIndex];
                     possibleMoves.splice(randomIndex, 1);
-                    console.log(indexOfButton);
                     const buttonToBePlayed = document.getElementById(`button${indexOfButton}`);
                     makeMove(buttonToBePlayed);
                 });
