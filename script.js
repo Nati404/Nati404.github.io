@@ -21,6 +21,7 @@ function resetGame(){
     for(let i = 1; i <= 9; i++){
         possibleMoves.push(i);
         const button = document.getElementById(`button${i}`);
+        button.style.pointerEvents = "auto";
         button.setAttribute("class", "empty");
         button.style.backgroundImage = "";
         currentMove = 0;
@@ -70,6 +71,7 @@ function gameHasEnded(){
 
 function makeMove(button){
     // Displays whose turn it is
+    button.style.pointerEvents = "none";
     const imageFile = (currentMove == 0) ? xSymbolFile:zeroSymbolFile;
     // Apply the correct image to the button
     button.style.backgroundImage = `url(${imageFile})`;
